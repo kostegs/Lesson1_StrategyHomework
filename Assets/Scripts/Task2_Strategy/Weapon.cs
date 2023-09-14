@@ -8,7 +8,7 @@ namespace Task2.Strategy
         [SerializeField] private int _ammoCount;
         [SerializeField] private Transform _shotPoint;
         [SerializeField] private GameObject _bulletPrefab;
-        [SerializeField] private float _ttl;
+        
         [field: SerializeField] public WeaponType WeaponType { get; private set; }
         [field: SerializeField] public string WeaponName { get; private set; }
         public int AmmoCount => _ammoStorage.AmmoCount;
