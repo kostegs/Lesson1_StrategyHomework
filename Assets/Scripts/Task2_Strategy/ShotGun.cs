@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Task2.Strategy
@@ -9,16 +10,6 @@ namespace Task2.Strategy
         public void Shot(Transform shootingPoint, GameObject bulletPrefab, float ttl)
         {
             Debug.Log("Выстрел из дробовика");
-        }
-
-        public void ShotParticleEffect(ParticleSystem particleSystem)
-        {
-            Debug.Log("Спецэффект выстрела из дробовика");
-        }
-
-        public void ShotSFX(AudioSource audioSource)
-        {
-            Debug.Log("Звук выстрела из дробовика");
         }
     }
 }

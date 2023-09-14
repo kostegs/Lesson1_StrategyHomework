@@ -13,9 +13,9 @@ namespace Task2.Strategy
         [field: SerializeField] public string WeaponName { get; private set; }
 
         private IShooter _shootingStrategy;
+        private bool _isActive = false;
         private AudioSource _audioSource;
         private ParticleSystem _particleSystem;
-        private bool _isActive = false;
 
         public void Initialize()
         {
@@ -37,14 +37,25 @@ namespace Task2.Strategy
             if (_shootingStrategy == null)
                 throw new ArgumentNullException(nameof(_shootingStrategy));
 
-            _shootingStrategy.Shot(_shotPoint, _bulletPrefab, _ttl);
-            
-            if (_audioSource != null)
-                _shootingStrategy.ShotSFX(_audioSource);
+            _shootingStrategy.Shot(_shotPoint, _bulletPrefab, _ttl);            
+            SFX();
+            ParticleEffect();            
+        }
 
-            if (_particleSystem != null)
-                _shootingStrategy.ShotParticleEffect(_particleSystem);
+        public void SFX()
+        {
+            if (_audioSource == null) 
+                return;
 
+            Debug.Log("Standart SFX");
+        }
+
+        public void ParticleEffect()
+        {
+            if (_particleSystem == null)
+                return;
+
+            Debug.Log("Particle effect");
         }
     }
 }
