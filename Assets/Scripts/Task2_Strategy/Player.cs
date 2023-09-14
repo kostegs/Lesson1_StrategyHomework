@@ -9,7 +9,7 @@ namespace Task2.Strategy
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
-                _weaponHolder.CurrentWeapon.Fire();                    
+                _weaponHolder.Fire();                    
         }
     }
 }

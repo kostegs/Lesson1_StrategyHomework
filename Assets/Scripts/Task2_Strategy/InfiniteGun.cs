@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Task2.Strategy
@@ -7,9 +6,9 @@ namespace Task2.Strategy
     {
         public int AmmoCount { get; private set; }
 
-        public void Shot(Transform shootingPoint, GameObject bulletPrefab, float ttl)
+        public void Shot(Transform shootingPoint, GameObject bulletPrefab, IAmmoStorage ammoStorage)
         {
-            Debug.Log("Выстрел из ружья с бесконечными патронами");
+            MonoBehaviour.Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
         }
     }
 }

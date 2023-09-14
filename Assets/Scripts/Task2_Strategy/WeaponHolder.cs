@@ -9,6 +9,9 @@ namespace Task2.Strategy
         [SerializeField] private List<Weapon> _weapons;
         public Weapon CurrentWeapon { get; private set; }
 
+        public event EventHandler<EventArgsCurrentWeapon> CurrentWeaponChanged;
+        public event EventHandler<EventArgsAmmoCount> AmmoChanged;
+
         private Queue<Weapon> _weaponsQueue = new Queue<Weapon>();
         private bool _isActive = false;
         
@@ -20,12 +23,18 @@ namespace Task2.Strategy
 
         public void Initialize()
         {
-            FillWeaponsQueue();
+            InitializeWeapons();            
             SwitchWeapon();
             _isActive = true;
         }
 
-        void FillWeaponsQueue()
+        public void Fire()
+        {
+            CurrentWeapon.Fire();
+            AmmoChanged?.Invoke(this, new EventArgsAmmoCount(CurrentWeapon.AmmoCount));
+        }
+
+        void InitializeWeapons()
         {
             foreach (var weapon in _weapons)
             {
@@ -56,7 +65,8 @@ namespace Task2.Strategy
             CurrentWeapon = _weaponsQueue.Dequeue();
             _weaponsQueue.Enqueue(CurrentWeapon);
             CurrentWeapon.gameObject.SetActive(true);
-            Debug.Log($"Current weapon switched. Curren weapon is {CurrentWeapon.WeaponName}");
+            CurrentWeaponChanged?.Invoke(this, new EventArgsCurrentWeapon(CurrentWeapon.WeaponName));
+            AmmoChanged?.Invoke(this, new EventArgsAmmoCount(CurrentWeapon.AmmoCount));
         }
 
     }

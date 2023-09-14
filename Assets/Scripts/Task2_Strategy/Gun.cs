@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Task2.Strategy
@@ -7,9 +6,10 @@ namespace Task2.Strategy
     {
         public int AmmoCount { get; private set; }
 
-        public void Shot(Transform shootingPoint, GameObject bulletPrefab, float ttl)
+        public void Shot(Transform shootingPoint, GameObject bulletPrefab, IAmmoStorage ammoStorage)
         {
-            Debug.Log("Обычный выстрел из обычного ружья");
+            MonoBehaviour.Instantiate(bulletPrefab, shootingPoint.position, Quaternion.identity);
+            ammoStorage.DivideAmmo(1);
         }        
     }
 }
