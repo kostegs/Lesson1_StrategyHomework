@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &101418606862155192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: _ttl
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: _ammoCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: _shotPoint
+      value: 
+      objectReference: {fileID: 2399987449694416544}
+    - target: {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9053714881499267925, guid: 1a104db52d25f43428eb6786df6a1b8c, type: 3}
+    - target: {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: <WeaponName>k__BackingField
+      value: ShotGun
+      objectReference: {fileID: 0}
+    - target: {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: <WeaponType>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 639049166251719315, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 639049166251719315, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428414470313947395, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4e1e94924904104fb1aae2f33e309aa, type: 2}
+    - target: {fileID: 5087165447121778530, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_Name
+      value: ShotGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778530, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087165447121778531, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331977515286861791, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331977515286861791, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 548fca1aac79e454d8739391bd0b1c81, type: 3}
+    - target: {fileID: 7331977515286861791, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4543295270879142519, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+    - {fileID: -7004680436718144743, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+--- !u!4 &2399987449694416544 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2316601117113078552, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+  m_PrefabInstance: {fileID: 101418606862155192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5184049625047730906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5087165447121778530, guid: fd3f327287ce5eb47aee8115c45a83b8, type: 3}
+  m_PrefabInstance: {fileID: 101418606862155192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5902251431545998859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5184049625047730906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de7346f7ad6f3145a7c158dabf087c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootingPoint: {fileID: 2399987449694416544}
+  _bulletPrefab: {fileID: 9053714881499267925, guid: 1a104db52d25f43428eb6786df6a1b8c, type: 3}
+  _weaponName: ShotGun
+  _ammoCount: 20

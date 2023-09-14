@@ -4,8 +4,6 @@ namespace Task2.Strategy
 {
     public class ShotGun : IShooter
     {
-        public int AmmoCount { get; private set; }
-
         public void Shot(Transform shootingPoint, GameObject bulletPrefab, IAmmoStorage ammoStorage)
         {
             int counterMax = ammoStorage.AmmoCount < 3 ? ammoStorage.AmmoCount : 3;
