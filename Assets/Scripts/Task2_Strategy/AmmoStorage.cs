@@ -2,13 +2,13 @@ namespace Task2.Strategy
 {
     public class AmmoStorage : IAmmoStorage
     {
-        private int _ammoStorage;
-
         public int AmmoCount => _ammoStorage;
 
-        public void AddAmmo(int amount) => _ammoStorage += amount;
+        private int _ammoStorage;
 
         public AmmoStorage(int ammoStorage) => _ammoStorage = ammoStorage < 0 ? 0 : ammoStorage;
+
+        public void AddAmmo(int amount) => _ammoStorage += amount;        
 
         public void DivideAmmo(int amount)
         {

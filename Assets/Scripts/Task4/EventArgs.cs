@@ -14,9 +14,6 @@ namespace Task4
     {
         public EnumWinningStrategy WinningStrategy;
 
-        public StrategyEventArgs(EnumWinningStrategy winningStrategy)
-        {
-            WinningStrategy = winningStrategy;
-        }
+        public StrategyEventArgs(EnumWinningStrategy winningStrategy) => WinningStrategy = winningStrategy;
     }
 }

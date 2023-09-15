@@ -4,7 +4,6 @@ namespace Task3
 {
     public class Trader : MonoBehaviour
     {
-
         private ITradingStrategy _tradingStrategy;
         private UIStorage _uiStorage;
 

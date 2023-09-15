@@ -6,10 +6,10 @@ namespace Task4
 {
     public class BallStorage
     {
-        private static Dictionary<SphereColors, int> _countOfColors;
-
         public IEnumerable CountOfColors => _countOfColors;
         public event EventHandler<SphereEventArgs> CountOfColorsChanged;
+
+        private Dictionary<SphereColors, int> _countOfColors;
 
         public void Initialize(IEnumerable ballList)
         {

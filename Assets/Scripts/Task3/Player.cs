@@ -6,7 +6,7 @@ namespace Task3
 {
     public class Player : MonoBehaviour
     {
-        const int DEF_REPUTATION = 100;
+        const int DEFAULT_REPUTATION = 100;
 
         [SerializeField] Camera _currentCamera;
         [SerializeField] float _speed;
@@ -15,8 +15,8 @@ namespace Task3
 
         public event EventHandler<PlayerReputationEventArgs> ReputationChanged;
 
-        Vector3 _target;
-        bool _isMoving;
+        private Vector3 _target;
+        private bool _isMoving;
 
         private void Update()
         {
@@ -54,7 +54,7 @@ namespace Task3
 
         public void Initialize(UIStorage uiStorage)
         {
-            Reputation = DEF_REPUTATION;
+            Reputation = DEFAULT_REPUTATION;
 
             ReputationChanged += uiStorage.PlayerReputation.OnReputationChanged;
             ReputationChanged.Invoke(this, new PlayerReputationEventArgs(Reputation));

@@ -7,6 +7,7 @@ namespace Task2.Strategy
     public class WeaponHolder : MonoBehaviour
     {
         [SerializeField] private List<Weapon> _weapons;
+
         public Weapon CurrentWeapon { get; private set; }
 
         public event EventHandler<EventArgsCurrentWeapon> CurrentWeaponChanged;
