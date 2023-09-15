@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,11 +10,11 @@ namespace Task4
 
         private static Dictionary<SphereColors, int> _countOfColors;
 
+        public static event EventHandler<SphereEventArgs> CountOfColorsChanged;
+
         // TODO - Initialize
         private void Awake()
         {
-            if (_countOfColors == null)
-                _countOfColors = new Dictionary<SphereColors, int>();
 
             if (_countOfColors.ContainsKey(_color))
                 _countOfColors[_color] += 1;            
@@ -24,6 +24,8 @@ namespace Task4
             foreach (var numberOfColors in _countOfColors)
                 Debug.Log($"Color: {numberOfColors.Key} count: {numberOfColors.Value}");
         }
+
+        private void Start() => CountOfColorsChanged?.Invoke(this, new SphereEventArgs(_countOfColors));
 
         private void OnTriggerEnter(Collider other)
         {
@@ -36,8 +38,14 @@ namespace Task4
             if (_countOfColors.ContainsKey(_color))
                 _countOfColors[_color] -= 1;
 
-            foreach (var numberOfColors in _countOfColors)
-                Debug.Log($"Color: {numberOfColors.Key} count: {numberOfColors.Value}");
+            CountOfColorsChanged?.Invoke(this, new SphereEventArgs(_countOfColors));
         }
+
+        public static void Initialization()
+        {
+            _countOfColors = new Dictionary<SphereColors, int>();
+        }
+
+
     }
 }
