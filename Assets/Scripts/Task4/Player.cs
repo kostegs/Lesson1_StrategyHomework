@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Task4
@@ -7,8 +8,11 @@ namespace Task4
         [SerializeField] Camera _currentCamera;
         [SerializeField] float _speed;
 
-        Vector3 _target;
-        bool _isMoving;
+        public event Action OnWin;
+
+        private Vector3 _target;
+        private bool _isMoving;
+        private IWinningStrategy _winningStrategy;
 
         private void Update()
         {
@@ -31,10 +35,41 @@ namespace Task4
             }
         }
 
+        public void OnStrategyChoosen(object sender, StrategyEventArgs eventArgs)
+        {
+            var winningStrategy = eventArgs.WinningStrategy;
+
+            switch (winningStrategy)
+            {
+                case EnumWinningStrategy.DestroyAllColors:
+                    _winningStrategy = new Strategy_DestroyAll();
+                    break;
+                case EnumWinningStrategy.DestroyAllElementsOfOneColor:
+                    _winningStrategy = new Strategy_DestroyAllOneColor();
+                    break;
+            }
+        }
+
+        public void CheckWinning(object sender, SphereEventArgs eventArgs)
+        {
+            if (_winningStrategy != null)
+            {
+                bool isWin = _winningStrategy.CheckWinning(eventArgs.CountOfColors);
+
+                if (isWin)
+                {
+                    OnWin?.Invoke();
+                    gameObject.SetActive(false);                    
+                }
+            }
+        }
+
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(Vector3.zero, _target);
         }
+#endif
     }
 }

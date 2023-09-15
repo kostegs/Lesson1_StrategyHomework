@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 770153444065746578}
   - component: {fileID: 770153444065746579}
   - component: {fileID: 770153444065746580}
-  - component: {fileID: 6064243704571377098}
+  - component: {fileID: 1782955419926553500}
   m_Layer: 0
   m_Name: BlueSphere
   m_TagString: Untagged
@@ -98,7 +98,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6064243704571377098
+--- !u!114 &1782955419926553500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 770153444065746582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49dd117e0db91f04c9ebdc9fe50ba428, type: 3}
+  m_Script: {fileID: 11500000, guid: f8d08a4145c747b438739aa61baa2c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _color: 1
+  <Color>k__BackingField: 1
