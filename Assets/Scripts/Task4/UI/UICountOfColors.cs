@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,12 +8,12 @@ namespace Task4
     {
         [SerializeField] private TextMeshProUGUI _countOfColorsText;
 
-        public void OnCountChanged(object sender, SphereEventArgs eventAargs)
+        public void OnCountChanged(object sender, SphereEventArgs eventArgs)
         {
-            IEnumerable countOfColors = eventAargs.CountOfColors;
+            var countOfColors = eventArgs.CountOfColors as Dictionary<SphereColors, int>;
             string text = "Количество шаров по цветам: ";
             
-            foreach (var KeyValue in countOfColors as Dictionary<SphereColors, int>)
+            foreach (var KeyValue in countOfColors)
             {
                 text += $"{KeyValue.Key}: {KeyValue.Value} | ";
             }

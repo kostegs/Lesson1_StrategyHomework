@@ -9,4 +9,14 @@ namespace Task4
 
         public SphereEventArgs(IEnumerable countOfColors) => CountOfColors = countOfColors;
     }
+
+    public class StrategyEventArgs : EventArgs
+    {
+        public EnumWinningStrategy WinningStrategy;
+
+        public StrategyEventArgs(EnumWinningStrategy winningStrategy)
+        {
+            WinningStrategy = winningStrategy;
+        }
+    }
 }

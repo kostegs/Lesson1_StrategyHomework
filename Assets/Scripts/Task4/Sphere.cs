@@ -12,17 +12,12 @@ namespace Task4
 
         public static event EventHandler<SphereEventArgs> CountOfColorsChanged;
 
-        // TODO - Initialize
         private void Awake()
         {
-
             if (_countOfColors.ContainsKey(_color))
                 _countOfColors[_color] += 1;            
             else
                 _countOfColors.Add(_color, 1);
-
-            foreach (var numberOfColors in _countOfColors)
-                Debug.Log($"Color: {numberOfColors.Key} count: {numberOfColors.Value}");
         }
 
         private void Start() => CountOfColorsChanged?.Invoke(this, new SphereEventArgs(_countOfColors));
@@ -31,10 +26,7 @@ namespace Task4
         {
             if (other.gameObject.TryGetComponent<Player>(out _))
                 Destroy(gameObject);
-        }
 
-        private void OnDestroy()
-        {
             if (_countOfColors.ContainsKey(_color))
                 _countOfColors[_color] -= 1;
 
